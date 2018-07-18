@@ -1,11 +1,42 @@
-body{
+/* override default styles to a predictable value using the “universal” CSS selector (*)
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*/
+
+body {
     background-color: peachpuff;
 }
 
 h1 {
     color: darkred;
+    border-bottom: 1px solid #5D6063;
 }
 
 .summary-text {
     color: deeppink;
+}
+
+.contact {
+    border-color: darkgray;
+    border-width: 2px;
+    border-style: solid;
+    background-color: lightgray;
+    margin: 20px;
+    padding: 20px;
+}
+
+p {
+    /* Vertical  Horizontal */
+    padding: 5px 10px;
+
+    /* Top  Right  Bottom  Left */
+    /*padding: 20px 0 20px 10px;*/
+    
+    /* Add some space to the bottom of each <p> element */
+    margin-bottom: 50px;
 }
