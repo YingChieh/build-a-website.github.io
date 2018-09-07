@@ -8,7 +8,7 @@
 
 */
 
-body {
+#bk {
     background-color: peachpuff;
 }
 
@@ -36,7 +36,96 @@ p {
 
     /* Top  Right  Bottom  Left */
     /*padding: 20px 0 20px 10px;*/
-    
     /* Add some space to the bottom of each <p> element */
     margin-bottom: 50px;
+}
+
+.main-menu-fixed {
+    width: 100%;
+    height: 42px;
+    background: floralwhite;
+    /*讓選單的位置是固定的*/
+    position: fixed;
+    top: -85px;
+
+    /* CSS3 陰影*/
+    -webkit-box-shadow: 0px 3px 15px #333;
+    -moz-box-shadow: 0px 3px 15px #333;
+    box-shadow: 0px 3px 15px #333;
+}
+
+.sticky-menu-container {
+    min-height: 42px;
+}
+
+.main-menu {
+    position: relative;
+    /* z-index 控制選單的顯示層級，愈小表示這個元件愈容易被其他東西蓋過去，不可以太大 */
+    z-index: 998;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.main-menu > ul {
+    text-align: center;
+}
+
+
+/* 側邊固定選單 */
+
+.right-link {
+    /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/
+    position: fixed;
+    /*設置垂直位置*/
+    top: 50%;
+    /*背景顏色*/
+    background: #ffffff;
+    /*上下左右間距*/
+    padding: 10px 10px;
+
+    /*圓角*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    /* 漸進式移動 */
+    transition: right 0.5s ease-out;
+    -webkit-transition: right 0.5s ease-out;
+    -moz-transition: right 0.5s ease-out;
+    -o-transition: right 0.5s ease-out;
+}
+
+#linkedin {
+    margin-top: -50px;
+    /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+    right: -76px;
+}
+
+#github {
+    margin-top: 0px;
+    /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+    right: -62px;
+}
+
+#email {
+    margin-top: 50px;
+    /*設置水平位置，依所放的內容多寡需要自行手動調整*/
+    right: -96px;
+}
+
+#linkedin:hover {
+    /*當滑鼠移至此區塊時，伸縮區塊*/
+    right: -10px;
+}
+
+#github:hover {
+    /*當滑鼠移至此區塊時，伸縮區塊*/
+    right: -10px;
+}
+
+#email:hover {
+    /*當滑鼠移至此區塊時，伸縮區塊*/
+    right: -10px;
 }
